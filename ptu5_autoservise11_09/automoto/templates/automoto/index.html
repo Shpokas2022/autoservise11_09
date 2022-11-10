@@ -1,0 +1,11 @@
+{% extends 'automoto/base.html' %}
+{% block title%}Welcome to {{block.super}}{% endblock title %}
+{% block content %}
+
+<h1>DVA AUTOSERVISAS</h1>
+<ul>
+    <li>Total cars: {{ car_model_count }}</li>
+    <li>Total orders: {{ order_line_count }}</li>
+    <li>Total services: {{ service_count }}</li>
+</ul>
+{% endblock content %}
