@@ -1,0 +1,8 @@
+{% extends 'automoto/base.html' %}
+{% block title %} Order {{object.id}} {{ block.super }}{% endblock title %}
+{% block content %}
+    <h1> Order # {{object}} </h1>
+    <ul>
+        {{ object }}
+    </ul>
+{% endblock content %}

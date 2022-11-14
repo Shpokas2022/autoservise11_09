@@ -22,11 +22,11 @@ def cars(request):
     return render(request, 'automoto/cars.html', {'cars': Car.objects.all()})
 
 def car_info(request, car_id):
-    return render(request, 'automoto/car_info.html', {'cars': get_object_or_404(Car,id=car_id)})
+    return render(request, 'automoto/car_info.html', {'car': get_object_or_404(Car,id=car_id)})
 
 def orders(request):
     return render(request, 'automoto/orders.html', {'orders':Order.objects.all()})
 
-class OrderLineView(ListView):
+class OrderDetailView(DetailView):
     model = Order
-    template_name = 'automoto/order_line.html'
+    template_name = 'automoto/order_detail.html'
